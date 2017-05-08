@@ -1,10 +1,11 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+// Dependencies
+var restful = require('node-restful');
+var mongoose = restful.mongoose;
 
-var questionnaireSchema = new Schema({
-    name: String,
-    relatedTo: String,
-    
+// Schema
+var questionnaireSchema = new mongoose.Schema({
+    name: String
 });
 
-module.exports = mongoose.model('Questionnaire', questionnaireSchema);
+// Return model
+module.exports = restful.model('Nodemcus', questionnaireSchema);
