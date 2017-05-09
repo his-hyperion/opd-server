@@ -11,4 +11,4 @@ var questionnaireSchema = new mongoose.Schema({
 });
 
 // Return model
-module.exports = restful.model('Nodemcus', questionnaireSchema);
+module.exports = restful.model('questionnaires', questionnaireSchema);
