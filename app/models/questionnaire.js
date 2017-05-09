@@ -4,7 +4,10 @@ var mongoose = restful.mongoose;
 
 // Schema
 var questionnaireSchema = new mongoose.Schema({
-    name: String
+    name: String,
+    relatedTo: String,
+    remarks: String,
+    questions: Array
 });
 
 // Return model
