@@ -20,6 +20,10 @@ var router = express.Router();
 // ================================================================================
 var patientRoutes = require('./routes/patientRoutes');
 var questionnaireRoutes = require('./routes/questionnaireRoutes');
+var visitRoutes = require('./routes/visitsRoutes');
+var allergyRoutes = require('./routes/allergiesRoutes');
+var notesRoutes = require('./routes/notesRoutes');
+var attachmentsRoutes = require('./routes/attachmentsRouts');
 
 
 // middleware
@@ -32,6 +36,10 @@ router.use(function (req, res, next) {
 // app.use('/api', router);
 app.use('/patients', patientRoutes);
 app.use('/questionnaires', questionnaireRoutes);
+app.use('/visits', visitRoutes);
+app.use('/allergies', allergyRoutes);
+app.use('/notes', notesRoutes);
+app.use('/attachments', attachmentsRoutes);
 
 
 // START SERVER
