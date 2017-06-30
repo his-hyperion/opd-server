@@ -24,6 +24,8 @@ var visitRoutes = require('./routes/visitsRoutes');
 var allergyRoutes = require('./routes/allergiesRoutes');
 var notesRoutes = require('./routes/notesRoutes');
 var attachmentsRoutes = require('./routes/attachmentsRouts');
+var userRoutes = require('./routes/userRoutes');
+var authRoutes = require('./routes/authRoutes');
 
 
 // middleware
@@ -40,6 +42,8 @@ app.use('/visits', visitRoutes);
 app.use('/allergies', allergyRoutes);
 app.use('/notes', notesRoutes);
 app.use('/attachments', attachmentsRoutes);
+app.use('/users', userRoutes);
+app.use('/authenticate', authRoutes);
 
 
 // START SERVER
