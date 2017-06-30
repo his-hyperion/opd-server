@@ -1,6 +1,5 @@
 // Dependencies
-var restful = require('node-restful');
-var mongoose = restful.mongoose;
+var mongoose = require('mongoose');
 
 // Schema
 var questionnaireSchema = new mongoose.Schema({
@@ -11,4 +10,4 @@ var questionnaireSchema = new mongoose.Schema({
 });
 
 // Return model
-module.exports = restful.model('questionnaires', questionnaireSchema);
+module.exports = mongoose.model('questionnaires', questionnaireSchema);
