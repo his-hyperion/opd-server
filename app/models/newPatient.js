@@ -1,9 +1,10 @@
 // Dependencies
-var restful = require('node-restful');
-var mongoose = restful.mongoose;
+var mongoose = require('mongoose');
+
 
 // Schema
 var newPatiensSchema = new mongoose.Schema({
+    hin: String,
     title: String,
     firstName: String,
     lastName: String,
@@ -22,4 +23,4 @@ var newPatiensSchema = new mongoose.Schema({
 });
 
 // Return model
-module.exports = restful.model('newPatient', newPatiensSchema);
+module.exports = mongoose.model('newPatient', newPatiensSchema);
