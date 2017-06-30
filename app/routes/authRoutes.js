@@ -12,7 +12,7 @@ router.route('/')
             if (err) {
                 res.send(err);
             }
-            if (credentials.password == user.password) {
+            if (credentials && user && credentials.password == user.password) {
                 res.json(user);
             } else {
                 res.send(401);
