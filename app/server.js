@@ -12,7 +12,7 @@ app.use(cors());
 var port = process.env.PORT || 8080;
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/his_opd');
+mongoose.connect('mongodb://52.15.99.209:27017/his_opd');
 
 var router = express.Router();
 
