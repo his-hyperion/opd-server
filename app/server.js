@@ -26,6 +26,7 @@ var notesRoutes = require('./routes/notesRoutes');
 var attachmentsRoutes = require('./routes/attachmentsRouts');
 var userRoutes = require('./routes/userRoutes');
 var authRoutes = require('./routes/authRoutes');
+var queueRoutes = require('./routes/queueRoutes');
 
 
 // middleware
@@ -44,6 +45,7 @@ app.use('/notes', notesRoutes);
 app.use('/attachments', attachmentsRoutes);
 app.use('/users', userRoutes);
 app.use('/authenticate', authRoutes);
+app.use('/queues', queueRoutes);
 
 
 // START SERVER
