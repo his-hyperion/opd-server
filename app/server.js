@@ -33,6 +33,8 @@ var dosageRoutes = require('./routes/dosageRoutes');
 var drugDetailsRoutes = require('./routes/drugDetailsRoutes');
 var patientExaminationRoutes = require('./routes/patientExaminationRoutes');
 var labTestRequestRoutes = require('./routes/labTestRequestRoutes');
+var queueRoutes = require('./routes/queueRoutes');
+
 
 // middleware
 router.use(function (req, res, next) {
@@ -57,6 +59,8 @@ app.use('/dosages', dosageRoutes);
 app.use('/drugDetails', drugDetailsRoutes);
 app.use('/newExaminations', patientExaminationRoutes);
 app.use('/labTestRequest', labTestRequestRoutes);
+app.use('/queues', queueRoutes);
+
 
 // START SERVER
 // ================================================================================

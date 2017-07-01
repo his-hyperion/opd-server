@@ -15,7 +15,7 @@ router.route('/')
         });
     })
     .post(function (req, res) {
-        var questionnaire = new (Questionnaire);
+        var questionnaire = Questionnaire(req.body);
         questionnaire.save(function (err, response) {
             if (err) {
                 res.send(err);
