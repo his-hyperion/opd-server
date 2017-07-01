@@ -66,6 +66,23 @@ router.route('/patients')
                 res.json(queues);
             });
 
-    })
+    });
+
+router.route('/:doctorid')
+    .get(function (req, res) {
+        var doc_id = req.params.doctorid;
+        Queue.
+            find({ doctor: doc_id }).
+            populate('patients').
+            select('patients').
+            exec(function (err, queues) {
+                if (err) {
+                    res.send(err);
+                    return;
+                }
+                res.json(queues);
+            });
+
+    });
 
 module.exports = router;
