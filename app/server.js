@@ -27,7 +27,12 @@ var attachmentsRoutes = require('./routes/attachmentsRouts');
 var userRoutes = require('./routes/userRoutes');
 var authRoutes = require('./routes/authRoutes');
 var drugsRoutes = require('./routes/drugsRoutes');
-
+var periodRoutes = require('./routes/periodRoutes');
+var frequencyRoutes = require('./routes/frequencyRoutes');
+var dosageRoutes = require('./routes/dosageRoutes');
+var drugDetailsRoutes = require('./routes/drugDetailsRoutes');
+var patientExaminationRoutes = require('./routes/patientExaminationRoutes');
+var labTestRequestRoutes = require('./routes/labTestRequestRoutes');
 
 // middleware
 router.use(function (req, res, next) {
@@ -46,6 +51,12 @@ app.use('/attachments', attachmentsRoutes);
 app.use('/users', userRoutes);
 app.use('/authenticate', authRoutes);
 app.use('/drugs', drugsRoutes);
+app.use('/period', periodRoutes);
+app.use('/frequency', frequencyRoutes);
+app.use('/dosages', dosageRoutes);
+app.use('/drugDetails', drugDetailsRoutes);
+app.use('/newExaminations', patientExaminationRoutes);
+app.use('/labTestRequest', labTestRequestRoutes);
 
 // START SERVER
 // ================================================================================

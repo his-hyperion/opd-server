@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 
 // Models
-var Drug = require('../models/drug');
+var Dosage = require('../models/dosage');
 
 router.route('/')
     .get(function (req, res) {
-        Drug.find(function (err, response) {
+        Dosage.find(function (err, response) {
             if (err) {
                 res.send(err);
             } else {
@@ -15,8 +15,8 @@ router.route('/')
         });        
     })
     .post(function (req, res) {
-        var drug = new Drug(req.body);
-        drug.save(function (err, response) {
+        var dosage = new Dosage(req.body);
+        dosage.save(function (err, response) {
             if (err) {
                 res.send(err);
             }

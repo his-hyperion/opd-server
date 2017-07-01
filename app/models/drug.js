@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 
 // Schema
 var drugSchema = new mongoose.Schema({
-    drugName: String,    
+    drugName: String   
 });
 
 // Return model

@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 
 // Models
-var Drug = require('../models/drug');
+var labTestRequest = require('../models/labTestRequest');
 
 router.route('/')
     .get(function (req, res) {
-        Drug.find(function (err, response) {
+        labTestRequest.find(function (err, response) {
             if (err) {
                 res.send(err);
             } else {
@@ -15,18 +15,13 @@ router.route('/')
         });        
     })
     .post(function (req, res) {
-        var drug = new Drug(req.body);
-        drug.save(function (err, response) {
+        var labtestrequest = new labTestRequest(req.body);
+        labtestrequest.save(function (err, response) {
             if (err) {
                 res.send(err);
             }
             res.json(response);
         });
     })
-    
-    
-
-
-
 
 module.exports = router;
